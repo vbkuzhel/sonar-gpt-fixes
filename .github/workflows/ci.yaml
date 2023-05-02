@@ -48,7 +48,7 @@ jobs:
 
       - name: Push the changes
         run: |
-          cd "${RUNNER_TEMP}"/result
+          cd "${RUNNER_TEMP}"/result/result
           git config --global user.email "noreply@example.com"
           git config --global user.name "OpenAI GPT"
 

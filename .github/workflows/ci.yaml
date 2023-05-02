@@ -44,11 +44,11 @@ jobs:
           openai-token: ${{ secrets.OPENAI_TOKEN }}
           github-token: ${{ secrets.PAT_TOKEN }}
           sources-dir: ${{ github.workspace }}
-          output-dir: ${{ steps.checkout_branch.outputs.output_dir }}/result
+          output-dir: ${{ steps.checkout_branch.outputs.output_dir }}
 
       - name: Push the changes
         run: |
-          cd "${RUNNER_TEMP}"/result/result
+          cd "${RUNNER_TEMP}"/result
           git config --global user.email "noreply@example.com"
           git config --global user.name "OpenAI GPT"
 
